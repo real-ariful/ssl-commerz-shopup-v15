@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <record id="transaction_form_sslcommerz" model="ir.ui.view">
+      <field name="name">SSLCommerz Transaction Form</field>
+      <field name="model">payment.transaction</field>
+      <field name="inherit_id" ref="payment.payment_transaction_form"/>
+      <field name="arch" type="xml">
+        <xpath expr='//sheet' position='inside'>
+          <notebook>
+            <page string="SSL Commerz TX Details">
+              <group>
+                <group>
+                  <field name="sslcommerz_status" readonly="1"/>
+                  <field name="sslcommerz_tran_date" readonly="1"/>
+                  <field name="sslcommerz_tran_id" readonly="1"/>
+                  <field name="sslcommerz_val_id" readonly="1"/>
+                  <field name="sslcommerz_amount" readonly="1"/>
+                  <field name="sslcommerz_store_amount" readonly="1"/>
+                  <field name="sslcommerz_currency" readonly="1"/>
+                  <field name="sslcommerz_bank_tran_id" readonly="1"/>
+                  <field name="sslcommerz_card_type" readonly="1"/>
+                  <field name="sslcommerz_card_no" readonly="1"/>
+                  <field name="sslcommerz_card_issuer" readonly="1"/>
+                  <field name="sslcommerz_card_brand" readonly="1"/>
+                  <field name="sslcommerz_card_issuer_country" readonly="1"/>
+                  <field name="sslcommerz_card_issuer_country_code" readonly="1"/>
+                  <field name="sslcommerz_currency_type" readonly="1"/>
+                  <field name="sslcommerz_currency_amount" readonly="1"/>
+                </group>
+                <group>
+                  <field name="sslcommerz_currency_rate" readonly="1"/>
+                  <field name="sslcommerz_base_fair" readonly="1"/>
+                  <field name="sslcommerz_value_a" readonly="1"/>
+                  <field name="sslcommerz_value_b" readonly="1"/>
+                  <field name="sslcommerz_value_c" readonly="1"/>
+                  <field name="sslcommerz_value_d" readonly="1"/>
+                  <field name="sslcommerz_emi_instalment" readonly="1"/>
+                  <field name="sslcommerz_emi_amount" readonly="1"/>
+                  <field name="sslcommerz_emi_description" readonly="1"/>
+                  <field name="sslcommerz_emi_issuer" readonly="1"/>
+                  <field name="sslcommerz_account_details" readonly="1"/>
+                  <field name="sslcommerz_risk_title" readonly="1"/>
+                  <field name="sslcommerz_risk_level" readonly="1"/>
+                  <field name="sslcommerz_APIConnect" readonly="1"/>
+                  <field name="sslcommerz_validated_on" readonly="1"/>
+                  <field name="sslcommerz_gw_version" readonly="1"/>
+                </group>
+              </group>
+            </page>
+          </notebook>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
