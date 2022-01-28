@@ -40,5 +40,5 @@ class SslcommerzTransaction(models.Model):
 
 
     def _get_transaction(self, data):
-        existing_fields = dict(self._fields)
-        return {f'sslcommerz_{k}':v for k,v in data.items() if existing_fields.get(k)}
+        existing_fields = list(self._fields)
+        return { f'sslcommerz_{k}':v for k,v in data.items() if f'sslcommerz_{k}' in existing_fields }
